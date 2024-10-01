@@ -26,7 +26,7 @@ app.get('/fundraisers', (req, res) => {
   const query = `
         SELECT * FROM fundraiser 
         LEFT JOIN category ON fundraiser.CATEGORY_ID = category.CATEGORY_ID 
-        WHERE active = True
+        WHERE ACTIVE = True
     `;
   dbConnection.query(query, (error, rows) => {
     if (error) {
@@ -43,7 +43,7 @@ app.get('/fundraisers/search', (req, res) => {
   let query = `
         SELECT * FROM fundraiser 
         LEFT JOIN category ON fundraiser.CATEGORY_ID = category.CATEGORY_ID 
-        WHERE active = True
+        WHERE ACTIVE = True
     `;
 
   if (ORGANIZER) query += ` AND ORGANIZER = ?`;
