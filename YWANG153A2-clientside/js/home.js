@@ -17,7 +17,7 @@ function displayList() {
             <p>City: ${fundraiser.CITY}</p>
             <p>Active: ${fundraiser.ACTIVE ? "active" : "not suspended"}</p>
             <p>Category: ${fundraiser.NAME}</p>
-            <a href="./fundraiser.js/${fundraiser.FUNDRAISER_ID}">More</a>
+            <a href="./fundraiser.html?id=${fundraiser.FUNDRAISER_ID}">More</a>
         </div>
       `
     }

@@ -71,3 +71,35 @@ footer {
     margin-top: auto;
     font-size: 13px;
 }
+
+.search-form {
+    margin: 10px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4811b7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
