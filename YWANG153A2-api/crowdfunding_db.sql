@@ -54,6 +54,7 @@ CREATE TABLE `fundraiser` (
   `CURRENT_FUNDING` int DEFAULT NULL,
   `CITY` varchar(45) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `CATEGORY_ID` int DEFAULT NULL,
+  `ACTIVE` tinyint DEFAULT '1',
   PRIMARY KEY (`FUNDRAISER_ID`),
   KEY `funraiser_category_fcfk_idx` (`CATEGORY_ID`),
   CONSTRAINT `funraiser_category_fcfk` FOREIGN KEY (`CATEGORY_ID`) REFERENCES `category` (`CATEGORY_ID`)
@@ -66,7 +67,7 @@ CREATE TABLE `fundraiser` (
 
 LOCK TABLES `fundraiser` WRITE;
 /*!40000 ALTER TABLE `fundraiser` DISABLE KEYS */;
-INSERT INTO `fundraiser` VALUES (1,'Martha Stewart','Cancer Treatment for a Local Resident',25000,19000,'Philadelphia',2),(2,'EcoFuture','Plastic-Free Oceans Initiative',50000,22000,'San Diego',3),(3,'Creative Minds','Public Art Installation',15000,8000,'Portland',4),(4,'Save the Paws','Spay and Neuter Campaign',12000,5000,'Denver',5),(5,'Bright Horizons','STEM Workshops for Girls',8000,3000,'San Jose',1),(6,'Healing Hands','Support for Rare Disease Research',30000,15000,'Orlando',2),(7,'Green Earth','Reforestation in National Parks',40000,18000,'Phoenix',3);
+INSERT INTO `fundraiser` VALUES (1,'Martha Stewart','Cancer Treatment for a Local Resident',25000,19000,'Philadelphia',2,1),(2,'EcoFuture','Plastic-Free Oceans Initiative',50000,22000,'San Diego',3,1),(3,'Creative Minds','Public Art Installation',15000,8000,'Portland',4,1),(4,'Save the Paws','Spay and Neuter Campaign',12000,5000,'Denver',5,1),(5,'Bright Horizons','STEM Workshops for Girls',8000,3000,'San Jose',1,1),(6,'Healing Hands','Support for Rare Disease Research',30000,15000,'Orlando',2,1),(7,'Green Earth','Reforestation in National Parks',40000,18000,'Phoenix',3,1);
 /*!40000 ALTER TABLE `fundraiser` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -79,4 +80,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-10-01 23:58:26
+-- Dump completed on 2024-10-02  0:38:28
